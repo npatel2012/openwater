@@ -1,0 +1,5 @@
+# Download and add following binaries from Red Hat customer portal to installs folder
+
+- JBoss EAP 6.4 installer: jboss-eap-6.4.0-installer.jar
+- JBoss BPMS 6.1.0 installer:i jboss-bpmsuite-6.1.0.GA-installer.jar
+
