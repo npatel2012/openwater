@@ -1,2 +1,3 @@
 installs/*.jar
 target/
+projects/external-client-ui-form/target/
