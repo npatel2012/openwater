@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <localRepository>/home/npatel/.m2/repository</localRepository>
+  <servers>
+    <server>
+      <username>admin</username>
+      <password>admin</password>
+      <id>fabric8.upload.repo</id>
+    </server>
+  </servers>
+  <profiles>
+    <profile>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <releases />
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>jboss</id>
+          <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+        </repository>
+        <repository>
+          <releases />
+          <snapshots />
+          <id>jboss-snapshot</id>
+          <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+        </repository>
+        <repository>
+          <releases>
+            <updatePolicy>never</updatePolicy>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>fsw</id>
+          <name>JBoss Maven Repository</name>
+          <url>http://maven.repository.redhat.com/techpreview/all/</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <releases />
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>jboss-plugins</id>
+          <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+        </pluginRepository>
+        <pluginRepository>
+          <releases />
+          <snapshots />
+          <id>jboss-snapshot-plugins</id>
+          <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+        </pluginRepository>
+        <pluginRepository>
+          <releases />
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>fsw</id>
+          <url>http://maven.repository.redhat.com/techpreview/all/</url>
+        </pluginRepository>
+      </pluginRepositories>
+      <id>standard-extra-repos</id>
+    </profile>
+  </profiles>
+  <pluginGroups>
+    <pluginGroup>org.apache.maven.plugins</pluginGroup>
+    <pluginGroup>org.codehaus.mojo</pluginGroup>
+  </pluginGroups>
+</settings>
