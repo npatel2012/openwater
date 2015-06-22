@@ -12,7 +12,7 @@ Instructions to follow
 	- git clone https://github.com/npatel2012/openwater.git	
 	```
 
-2. Download and add following binaries from Red Hat customer portal to installs folder
+2. Download and add following binaries from Red Hat Customer Portal and place in /installs folder
 	- JBoss EAP 6.4 installer: jboss-eap-6.4.0-installer.jar
 	- JBoss BPMS 6.1.0 installer:i jboss-bpmsuite-6.1.0.GA-installer.jar
 
