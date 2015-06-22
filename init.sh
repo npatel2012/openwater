@@ -106,6 +106,9 @@ echo "  - setting up demo projects..."
 echo
 cp -r $SUPPORT_DIR/bpm-suite-demo-niogit $SERVER_BIN/.niogit
 
+# For some reason having the plugins.git folder on the server causes problems, so better to delete it.
+rm -rf $SERVER_BIN/.niogit/plugins.git
+
 
 echo "  Building maven artifacts..."
 echo
