@@ -33,6 +33,7 @@
 
   <modules>
     <module>external-client-ui-form</module>
+    <module>CRM-WebService</module>
   </modules>
 
   <repositories>

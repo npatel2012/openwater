@@ -22,26 +22,26 @@ clear
 chmod +x installs/*.jar
 
 echo
-echo "#####################################################################################"
-echo "##                                                                                 ##"   
-echo "##  Setting up the                                                                 ##"
-echo "##                                                                                 ##"   
-echo "##            ${DEMO}                ##"
-echo "##                                                                                 ##"   
-echo "##                                                                                 ##"   
-echo "##        ####   ####    #   #    ###             ####  #  #   ###  ####           ##"
-echo "##        #   #  #   #  # # # #  #         #      #     #  #  #     #              ##"
-echo "##        ####   ####   #  #  #   ##      ###     ###   #  #   ##   ###            ##"
-echo "##        #   #  #      #     #     #      #      #     #  #     #  #              ##"
-echo "##        ####   #      #     #  ###              #     ####  ###   ####           ##"
-echo "##                                                                                 ##"   
-echo "##                                                                                 ##"   
-echo "##  brought to you by,                                                             ##"   
-echo "##                     ${AUTHORS}                             ##"
-echo "##                                                                                 ##"   
-echo "##  ${PROJECT}   ##"
-echo "##                                                                                 ##"   
-echo "#####################################################################################"
+echo "##############################################"
+echo "##                                          ##"   
+echo "##  Setting up the                          ##"
+echo "##                                          ##"   
+echo "##      ${DEMO}      ##"
+echo "##                                          ##"   
+echo "##                                          ##"   
+echo "##        ####   ####    #   #    ###       ##"
+echo "##        #   #  #   #  # # # #  #          ##"
+echo "##        ####   ####   #  #  #   ##        ##"
+echo "##        #   #  #      #     #     #       ##"
+echo "##        ####   #      #     #  ###        ##"
+echo "##                                          ##"   
+echo "##                                          ##"   
+echo "##  brought to you by,                      ##"   
+echo "##   ${AUTHORS} ##"
+echo "##                                          ##"   
+echo "##  ${PROJECT} ##" 
+echo "##                                          ##"   
+echo "##############################################"
 echo
 
 command -v mvn -q >/dev/null 2>&1 || { echo >&2 "Maven is required but not installed yet... aborting."; exit 1; }
@@ -119,6 +119,10 @@ echo
 echo "  - deploying retailer-external-form-1.0.war to EAP deployments directory"
 cp -r $PRJ_DIR/external-client-ui-form/target/retailer-external-form-1.0.war $SERVER_DIR/
 
+echo
+echo "  - deploying CRM-WebService-1.0.0.war to EAP deployments directory"
+cp -r $PRJ_DIR/CRM-WebService/target/CRM-WebService-1.0.war $SERVER_DIR/
+
 echo "  - setting up standalone.xml configuration adjustments..."
 echo
 cp $SUPPORT_DIR/standalone.xml $SERVER_CONF
@@ -153,8 +157,8 @@ echo "=        $SERVER_BIN/standalone.sh                                        
 echo "=                                                                                         ="
 echo "=    - login, build and deploy JBoss BPM Suite process project at:                        ="
 echo "=                                                                                         ="
-echo "=        http://localhost:8080/business-central (u:adminuser/p:bpmsuite1!)                    ="
+echo "=        http://localhost:8080/business-central (u:adminuser/p:bpmsuite1!)                ="
 echo "=                                                                                         ="
-echo "=   $DEMO Setup Complete.                 ="
+echo "=   $DEMO Setup Complete.                                        ="
 echo "==========================================================================================="
 echo
