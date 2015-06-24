@@ -19,7 +19,7 @@ BPM_VERSION=6.1
 clear 
 
 # add executeable in installs
-chmod +x installs/*.zip
+chmod +x installs/*.jar
 
 echo
 echo "#####################################################################################"
