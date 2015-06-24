@@ -116,8 +116,8 @@ mvn clean install -f $PRJ_DIR/pom.xml
 
 
 echo
-echo "  - deploying external-client-ui-form-1.0.war to EAP deployments directory"
-cp -r $PRJ_DIR/external-client-ui-form/target/external-client-ui-form-1.0.war $SERVER_DIR/
+echo "  - deploying retailer-external-form-1.0.war to EAP deployments directory"
+cp -r $PRJ_DIR/external-client-ui-form/target/retailer-external-form-1.0.war $SERVER_DIR/
 
 echo "  - setting up standalone.xml configuration adjustments..."
 echo

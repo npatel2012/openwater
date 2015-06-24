@@ -26,10 +26,15 @@ Instructions to follow
 	./target/jboss-eap-6.4/bin/standalone.sh	
 	```
 
-5. Login to business-central via	
+5. Login to business-central via following link and `build & deploy` artifacts from there	
 	```
 	http://localhost:8080/business-central (u:adminuser/p:bpmsuite1!)
 	```
 
+6. Start business process via one of the following methods:
+	```
+	Using External UI Form http://localhost:8080/retailer-external-form-1.0/
+	Using Form Available via Business Central
+	```
 
 You are ready to go now!!!
