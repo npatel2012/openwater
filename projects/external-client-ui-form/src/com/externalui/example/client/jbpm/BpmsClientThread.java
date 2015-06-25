@@ -5,7 +5,6 @@ import static javax.xml.xpath.XPathConstants.STRING;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.StringReader;
 import java.util.HashMap;
 import java.util.Random;
 
@@ -17,7 +16,6 @@ import javax.xml.xpath.XPathFactory;
 
 import org.apache.http.HttpException;
 import org.w3c.dom.Document;
-import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 public class BpmsClientThread {
@@ -28,14 +26,22 @@ public class BpmsClientThread {
     public String password = "bpmsuite1!";
     
     // Default sample input values
-	private String applicantName = "Niraj";
-	private String emailAddress = "npatel@redhat.com";
-	private String numberOfTravelers = "2i";
-	private String otherDetails = "NA";
-	private String fromDestination = "London";
-	private String toDestination = "Edinburgh";
-	private String preferredDateOfArrival = "2014-06-06";
-	private String preferredDateOfDeparture = "2014-06-12";
+	private String fi_retailerName = "Default RetailerName";
+	private String fi_retailerID = "Default Value";
+	private String fi_contactEmail = "Default Value";
+	private String fi_spid = "Default Value";
+	private String fi_address = "Default Value";
+	private String fi_otherAddress = "Default Value";
+	private String fi_otherDetails = "Default Value";
+	private String fi_typeOfWork = "Default Value";
+	private String fi_installMeterType = "Default Value";
+	private String fi_installMeterSize = "Default Value";
+	private String fi_installMeterDetails = "Default Value";
+	private String fi_contactNHH = "Default Value";
+	private String fi_contactName = "Default Value";
+	private String fi_contactNumber = "Default Value";
+	private String fi_notifyRetailerOfFieldVisit = "Default Value";
+	
 	
     private Jbpm6ClientImpl client;
     private String processid = null;
@@ -46,7 +52,6 @@ public class BpmsClientThread {
    
    private void init() {
        client = new Jbpm6ClientImpl(server, username, password, true);
-//       new Jbpm6ClientObjects(server, username, password);
    }
    
 	private int generateRandomNumber() {
@@ -65,26 +70,40 @@ public class BpmsClientThread {
         init();
         System.out.println(Thread.currentThread());
         
-    	applicantName = hm.get("applicantName");
-    	emailAddress = hm.get("emailAddress");
-    	numberOfTravelers = hm.get("numberOfTravelers");
-    	fromDestination = hm.get("fromDestination");
-    	toDestination = hm.get("toDestination");
-    	preferredDateOfArrival = hm.get("preferredDateOfArrival");
-    	preferredDateOfDeparture = hm.get("preferredDateOfDeparture");
-    	otherDetails = hm.get("otherDetails");
-
+		fi_retailerName = hm.get("fi_retailerName");
+		fi_retailerID = hm.get("fi_retailerID");
+		fi_contactEmail = hm.get("fi_contactEmail");
+		fi_spid = hm.get("fi_spid");
+		fi_address = hm.get("fi_address");
+		fi_otherAddress = hm.get("fi_otherAddress");
+		fi_otherDetails = hm.get("fi_otherDetails");
+		fi_typeOfWork = hm.get("fi_typeOfWork");
+		fi_installMeterType = hm.get("fi_installMeterType");
+		fi_installMeterSize = hm.get("fi_installMeterSize");
+		fi_installMeterDetails = hm.get("fi_installMeterDetails");
+		fi_contactNHH = hm.get("fi_contactNHH");
+		fi_contactName = hm.get("fi_contactName");
+		fi_contactNumber = hm.get("fi_contactNumber");
+		fi_notifyRetailerOfFieldVisit = hm.get("fi_notifyRetailerOfFieldVisit");        
+        
         try {
-			response = client.startProcess("org.specialtripsagency:specialtripsagencyproject:2.0.0",
-                    "org.specialtripsagency.specialtripsagencyprocess",
-                    "applicantName="+applicantName+
-                    ",emailAddress="+emailAddress+
-                    ",numberOfTravelers="+numberOfTravelers+
-                    ",preferredDateOfArrival="+preferredDateOfArrival+
-                    ",preferredDateOfDeparture="+preferredDateOfDeparture+
-                    ",otherDetails="+otherDetails+
-                    ",fromDestination="+fromDestination+
-                    ",toDestination="+toDestination);
+			response = client.startProcess("org.openwater:openwaterproject:1.0.0",
+                    "openwaterproject.meteringprocess",
+                    "fi_retailerName="+fi_retailerName+
+                    ",fi_retailerID="+fi_retailerID+
+                    ",fi_contactEmail="+fi_contactEmail+
+                    ",fi_spid="+fi_spid+
+                    ",fi_address="+fi_address+
+                    ",fi_otherAddress="+fi_otherAddress+
+                    ",fi_otherDetails="+fi_otherDetails+
+                    ",fi_typeOfWork="+fi_typeOfWork+
+                    ",fi_installMeterType="+fi_installMeterType+
+                    ",fi_installMeterSize="+fi_installMeterSize+
+                    ",fi_installMeterDetails="+fi_installMeterDetails+
+                    ",efi_contactNHH="+Boolean.getBoolean(fi_contactNHH)+
+                    ",fi_contactName="+fi_contactName+
+                    ",fi_contactNumber="+fi_contactNumber+
+                    ",efi_notifyRetailerOfFieldVisit="+Boolean.getBoolean(fi_notifyRetailerOfFieldVisit));
 
             System.out.println("Process started 1: " + response);
 

@@ -69,75 +69,140 @@ h2 {
 <body>
 
 	<div id="header">
-		<h1>SPECIAL TRIPS AGENCY - WEB FORM</h1>
+		<h1>RETAILER - WEB FORM</h1>
 	</div>
 
 	<div id="section">
 		<form action="SimpleServlet">
-			<h2>Customer Details:</h2>
+			<h2>Retailer Details:</h2>
 			
 			<div>
-				<label for = "applicantName">Applicant Name</label> 
+				<label for = "efi_retailerName">Retailer Name*</label> 
 				<div>
-					<input type="text" id = "applicantName" name="applicantName" size="20px" />
+					<input type="text" id = "efi_retailerName" name="efi_retailerName" size="20px" />
 				</div>
 			</div>
 
 			<div>
-				<label for = "emailAddress">Email Address</label>
+				<label for = "efi_retailerID">Retailer Reference ID*</label>
 				<div>
-					<input type="text" id = "emailAddress" name="emailAddress" size="20px" />
-				</div>
-			</div>
-
-			<h2>Travel Details:</h2>
-			<div>
-				<label for = "numberOfTravellers">Number Of Travelers</label>
-				<div>
-					<input type="text" id = "numberOfTravellers" name="numberOfTravelers" size="20px" /> 
-				</div>
-			</div>
-				
-			<div>
-				<label for = "fromDestination">From Destination</label>
-				<div>
-					<select id = "fromDestination" name="fromDestination">
-						<option value="London">London</option>
-					</select>
-				</div>
-			</div>
-				
-			<div>	
-				<label for = "toDestination">To Destination </label>
-				<div>
-					<select id = "toDestination" name="toDestination">
-						<option value="Edinburgh">Edinburgh</option>
-					</select>
-				</div>
-			</div>
-
-			<div>
-				<label for = "preferredDateOfArrival">Preferred Date Of Arrival (YYYY-MM-DD)</label>
-				<div>
-					<input type="text" id = "preferredDateOfArrival" name="preferredDateOfArrival" size="20px" />
+					<input type="text" id = "efi_retailerID" name="efi_retailerID" size="20px" />
 				</div>
 			</div>
 			
+			<div>
+				<label for = "efi_contactEmail">Email Address*</label>
+				<div>
+					<input type="text" id = "efi_contactEmail" name="efi_contactEmail" size="20px" />
+				</div>
+			</div>			
+
+			<h2>Premises Details:</h2>
+			<div>
+				<label for = "efi_spid">SPID - unique premises ID*</label>
+				<div>
+					<input type="text" id = "efi_spid" name="efi_spid" size="20px" /> 
+				</div>
+			</div>
+			
+			<div>
+				<label for = "efi_address">Address*</label>
+				<div>
+					<input type="text" id = "efi_address" name="efi_address" size="20px" /> 
+				</div>
+			</div>
+			
+			<div>
+				<label for = "efi_otherAddress">Other Address</label>
+				<div>
+					<input type="text" id = "efi_otherAddress" name="efi_otherAddress" size="20px" /> 
+				</div>
+			</div>
+			
+			<div>
+				<label for = "efi_otherDetails">Other Details (optional)</label>
+				<div>
+					<input type="text" id = "efi_otherDetails" name="efi_otherDetails" size="20px" /> 
+				</div>
+			</div>
+			
+			<h2>Type Of Work Details</h2>			
+				
+			<div>
+				<label for = "efi_typeOfWork">Type Of Work*</label>
+				<div>
+					<select id = "efi_typeOfWork" name="efi_typeOfWork">
+						<option value="installation">Installation</option>
+						<option value="accuracy test">Accuracy Test</option>
+						<option value="meter repair">Meter Repair</option>
+						<option value="replacement due to fault">Replacement due to fault</option>
+						<option value="change of meter">Change Of Meter</option>
+					</select>
+				</div>
+			</div>
+
+			<div>
+				<label for = "efi_installMeterType">Install Meter Type</label>
+				<div>
+					<select id = "efi_installMeterType" name="efi_installMeterType">
+						<option value="Standard">Standard</option>
+						<option value="non-standard">Non Standard</option>
+						<option value="unknown">Unknown</option>
+					</select>
+				</div>
+			</div>
 			<div> 
-				<label for = "preferredDateOfDeparture">Preferred Date Of Departure (YYYY-MM-DD)</label>
+				<label for = efi_installMeterSize>Install Meter Size (in mm)</label>
 			
 				<div>	
-					<input type="text" id = "preferredDateOfDeparture" name="preferredDateOfDeparture" size="20px" />
+					<input type="text" id = "efi_installMeterSize" name="efi_installMeterSize" size="20px" />
 				</div>
 			</div>
 
 			<div>
-				<label for = "otherDetails">Other Details</label>
+				<label for = "efi_installMeterDetails">Install Meter Details</label>
 
 				<div>
-					<input type="text" id = "otherDetails" name="otherDetails" value="N/A" size="50px" />
+					<input type="text" id = "efi_installMeterDetails" name="efi_installMeterDetails" value="N/A" size="50px" />
 				</div>
 			</div>
+			
+			<h2>Consent Details:</h2>
+			
+			<div>
+				<label for="efi_contactNHH">Contact NHH?*</label>
+				<div>
+						<br><input type="radio" name="efi_contactNHH" value="1">Yes
+				</div>
+				<div>
+						<br><input type="radio" name="efi_contactNHH" value="0">No
+				</div>
+			</div>
+			
+			<div>
+				<label for = "efi_contactName" onhelp="fill in if Contact NHH is set to 'YES' ">Contact Name (required if above set to 'YES') </label> 
+				<div>
+					<input type="text" id = "efi_contactName" name="efi_contactName" size="20px" />
+				</div>
+			</div>
+
+			<div>
+				<label for = "efi_contactNumber" onhelp="fill in if Contact NHH is set to 'YES'">Contact Number (required if above set to 'YES')</label>
+				<div>
+					<input type="text" id = "efi_contactNumber" name="efi_contactNumber" size="20px" />
+				</div>
+			</div>
+			
+			<div>
+				<label for="efi_notifyRetailerOfFieldVisit">Notify Retailer of Field Visit*</label>
+				<div>
+						<br><input type="radio" name="efi_notifyRetailerOfFieldVisit" value="1">Yes
+				</div>
+				<div>
+						<br><input type="radio" name="efi_notifyRetailerOfFieldVisit" value="0">No
+				</div>
+			</div>
+			
 		
 			<input type="submit" value="SUBMIT"><br>
 		</form>

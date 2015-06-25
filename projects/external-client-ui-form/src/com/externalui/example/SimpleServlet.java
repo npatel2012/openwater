@@ -25,18 +25,30 @@ public class SimpleServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException { 
 		
-		String color = null; 
 		
 		// reading user inputs 
 		HashMap<String, String> hm = new HashMap<String, String>();
-		hm.put("applicantName", request.getParameter("applicantName"));
-		hm.put("emailAddress", request.getParameter("emailAddress"));
-		hm.put("numberOfTravelers", request.getParameter("numberOfTravelers") + "i"); // special case where the integer value should be submitted by appending "i" in the end to avoid java.lang.ClassCastException
-		hm.put("fromDestination", request.getParameter("fromDestination"));
-		hm.put("toDestination", request.getParameter("toDestination"));
-		hm.put("preferredDateOfArrival", request.getParameter("preferredDateOfArrival"));
-		hm.put("preferredDateOfDeparture", request.getParameter("preferredDateOfDeparture"));
-		hm.put("otherDetails", request.getParameter("otherDetails"));
+		hm.put("fi_retailerName", request.getParameter("efi_retailerName"));
+		hm.put("fi_retailerID", request.getParameter("efi_retailerID"));
+		hm.put("fi_contactEmail", request.getParameter("efi_contactEmail"));
+		hm.put("fi_spid", request.getParameter("efi_spid"));
+		hm.put("fi_address", request.getParameter("efi_address"));
+		hm.put("fi_otherAddress", request.getParameter("efi_otherAddress"));
+		hm.put("fi_otherDetails", request.getParameter("efi_otherDetails"));
+		hm.put("fi_typeOfWork", request.getParameter("efi_typeOfWork"));
+		hm.put("fi_installMeterType", request.getParameter("efi_installMeterType"));
+		hm.put("fi_installMeterSize", request.getParameter("efi_installMeterSize"));
+		hm.put("fi_installMeterDetails", request.getParameter("efi_installMeterDetails"));
+		hm.put("fi_contactNHH", request.getParameter("efi_contactNHH"));
+		hm.put("fi_contactName", request.getParameter("efi_contactName"));
+		hm.put("fi_contactNumber", String.valueOf(request.getParameter("efi_contactNumber") + "s"));
+		hm.put("fi_notifyRetailerOfFieldVisit", request.getParameter("efi_notifyRetailerOfFieldVisit"));
+	
+		for (String key : hm.keySet()) {
+			System.out.println(key + " " + hm.get(key) + " " + hm.get(key).getClass());
+          }		
+		
+//		hm.put("numberOfTravelers", request.getParameter("numberOfTravelers") + "i"); // special case where the integer value should be submitted by appending "i" in the end to avoid java.lang.ClassCastException
 		
 		System.out.println("=====> Before sending request: HashMap values are: \n" + hm);
 		BpmsClientThread t = new BpmsClientThread();
