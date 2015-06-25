@@ -11,29 +11,23 @@ public class notifyCRM {
 	@WebResult(name = "response")
 	@WebMethod()
 	public String submit(
-			@WebParam(name = "retailerName") String retailerName,
-			@WebParam(name = "retailerID") java.lang.String retailerID,
-			@WebParam(name = "contactEmailID") java.lang.String contactEmailID,
-			@WebParam(name = "SPID") java.lang.String spid)
+			@WebParam(name = "retailerID") java.lang.String retailerID)
 	{
 
-		System.out.println("notifyCRM:submit WebService Invoked,");
-		System.out.println("reatilerName:" +retailerName +" retailerID:" +retailerID + " contactEmailID:" +contactEmailID +" SPID:" +spid);
-		return "received";
+		System.out.println("[Web Service Log] notifyCRM:submit WebService Invoked,");
+		System.out.println("[Web Service Log] retailerID: [" +retailerID + "]");
+		return "received submit() request - response from CRM";
 	}
 	
 	@WebResult(name = "response")
 	@WebMethod()
 	public String notifyRetailer(
-			@WebParam(name = "retailerName") String retailerName,
-			@WebParam(name = "retailerID") java.lang.String retailerID,
-			@WebParam(name = "contactEmailID") java.lang.String contactEmailID,
-			@WebParam(name = "fieldSiteVisitDate") java.lang.String fieldSiteVisitDate)
+			@WebParam(name = "retailerID") java.lang.String retailerID)
 	{
 
-		System.out.println("notifyCRM:notifyRetailer WebService Invoked,");
-		System.out.println("reatilerName:" +retailerName +" retailerID:" +retailerID + " contactEmailID:" +contactEmailID +" fieldSiteVisitDate:" +fieldSiteVisitDate);
-		return "received";
+		System.out.println("[Web Service Log] notifyCRM:notifyRetailer WebService Invoked,");
+		System.out.println("[Web Service Log] retailerID: [" +retailerID + "]");
+		return "received notifyRetailer() request - response from CRM";
 	}
 	
 	
