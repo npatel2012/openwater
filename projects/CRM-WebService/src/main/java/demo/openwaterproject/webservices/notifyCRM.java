@@ -16,7 +16,7 @@ public class notifyCRM {
 
 		System.out.println("[Web Service Log] notifyCRM:submit WebService Invoked,");
 		System.out.println("[Web Service Log] retailerID: [" +retailerID + "]");
-		return "received submit() request - response from CRM";
+		return "[ACK FROM CRM WEBSERVICE] received call for submit() request";
 	}
 	
 	@WebResult(name = "response")
@@ -27,7 +27,7 @@ public class notifyCRM {
 
 		System.out.println("[Web Service Log] notifyCRM:notifyRetailer WebService Invoked,");
 		System.out.println("[Web Service Log] retailerID: [" +retailerID + "]");
-		return "received notifyRetailer() request - response from CRM";
+		return "[ACK FROM CRM WEBSERVICE] received call for notifyRetailer() request";
 	}
 	
 	
