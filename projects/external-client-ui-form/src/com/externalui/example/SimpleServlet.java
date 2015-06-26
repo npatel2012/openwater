@@ -37,11 +37,11 @@ public class SimpleServlet extends HttpServlet {
 		hm.put("fi_otherDetails", request.getParameter("efi_otherDetails"));
 		hm.put("fi_typeOfWork", request.getParameter("efi_typeOfWork"));
 		hm.put("fi_installMeterType", request.getParameter("efi_installMeterType"));
-		hm.put("fi_installMeterSize", request.getParameter("efi_installMeterSize"));
+		hm.put("fi_installMeterSize", request.getParameter("efi_installMeterSize") + "tempstring");
 		hm.put("fi_installMeterDetails", request.getParameter("efi_installMeterDetails"));
 		hm.put("fi_contactNHH", request.getParameter("efi_contactNHH"));
 		hm.put("fi_contactName", request.getParameter("efi_contactName"));
-		hm.put("fi_contactNumber", String.valueOf(request.getParameter("efi_contactNumber") + "s"));
+		hm.put("fi_contactNumber", request.getParameter("efi_contactNumber") + "tempstring");
 		hm.put("fi_notifyRetailerOfFieldVisit", request.getParameter("efi_notifyRetailerOfFieldVisit"));
 	
 		for (String key : hm.keySet()) {

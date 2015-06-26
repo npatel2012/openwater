@@ -100,10 +100,10 @@ public class BpmsClientThread {
                     ",fi_installMeterType="+fi_installMeterType+
                     ",fi_installMeterSize="+fi_installMeterSize+
                     ",fi_installMeterDetails="+fi_installMeterDetails+
-                    ",efi_contactNHH="+Boolean.getBoolean(fi_contactNHH)+
+                    ",fi_contactNHH="+fi_contactNHH+
                     ",fi_contactName="+fi_contactName+
                     ",fi_contactNumber="+fi_contactNumber+
-                    ",efi_notifyRetailerOfFieldVisit="+Boolean.getBoolean(fi_notifyRetailerOfFieldVisit));
+                    ",fi_notifyRetailerOfFieldVisit="+fi_notifyRetailerOfFieldVisit);
 
             System.out.println("Process started 1: " + response);
 

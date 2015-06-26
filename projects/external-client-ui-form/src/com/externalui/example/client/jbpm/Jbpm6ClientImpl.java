@@ -66,6 +66,7 @@ public class Jbpm6ClientImpl implements Jbpm6Client{
 	}
 	
 	private Response send(String url, Http httpType){
+		System.out.println("URL = [" + url + "]");
 		RequestSpecification rs=
 				given().redirects().follow(true)
 				.auth().preemptive().basic(username,password)

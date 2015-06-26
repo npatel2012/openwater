@@ -172,10 +172,10 @@ h2 {
 			<div>
 				<label for="efi_contactNHH">Contact NHH?*</label>
 				<div>
-						<br><input type="radio" name="efi_contactNHH" value="1">Yes
+						<br><input type="radio" name="efi_contactNHH" value="true">Yes
 				</div>
 				<div>
-						<br><input type="radio" name="efi_contactNHH" value="0">No
+						<br><input type="radio" name="efi_contactNHH" value="false">No
 				</div>
 			</div>
 			
@@ -196,10 +196,10 @@ h2 {
 			<div>
 				<label for="efi_notifyRetailerOfFieldVisit">Notify Retailer of Field Visit*</label>
 				<div>
-						<br><input type="radio" name="efi_notifyRetailerOfFieldVisit" value="1">Yes
+						<br><input type="radio" name="efi_notifyRetailerOfFieldVisit" value="true">Yes
 				</div>
 				<div>
-						<br><input type="radio" name="efi_notifyRetailerOfFieldVisit" value="0">No
+						<br><input type="radio" name="efi_notifyRetailerOfFieldVisit" value="false">No
 				</div>
 			</div>
 			
