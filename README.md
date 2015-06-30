@@ -34,7 +34,13 @@ Instructions to follow
 6. Start business process via one of the following methods:
 	```
 	Using External UI Form http://localhost:8080/retailer-external-form-1.0/
-	Using Form Available via Business Central
+	Using form available via Business Central
 	```
+
+7. Login to JBoss Administration Console via following link:
+	```
+	http://localhost:9990/console/index.html (u:admin/p:jbosseap1!)
+	```
+
 
 You are ready to go now!!!
